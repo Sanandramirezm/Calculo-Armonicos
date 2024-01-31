@@ -47,7 +47,7 @@ def Grafica_2D(df,root):
 def Grafica_mensaje(df,l,root):
     # Crear una figura y ejes
     fig, ax = plt.subplots(figsize=(10, 6))
-    # Graficar tus datos
+    
     df.plot(ax=ax)
     # Título de la gráfica
     plt.title('Mensaje')
@@ -64,8 +64,7 @@ def Grafica_mensaje(df,l,root):
     ax.set_ylabel('Hz')
     # Ajustar el margen inferior para dar espacio a los títulos de los ejes
     plt.subplots_adjust(bottom=0.2, top=0.9)
-    # Convertir el gráfico a una imagen en format
-    # o base64
+    # Convertir el gráfico a una imagen en formato base64
     img_data = BytesIO()
     fig.savefig(img_data, format='png')
     img_data.seek(0)
